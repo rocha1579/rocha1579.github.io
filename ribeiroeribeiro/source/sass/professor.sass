@@ -1,0 +1,21 @@
+@import includes/common
+@import includes/text
+    
+main
+    @include desktop
+        display: flex
+
+    .side-picture
+        @include desktop
+            min-width: 60%
+            margin-top: 4.6rem
+
+        img
+            @include phone
+                width: 100vw
+                margin-left: -$page-margin
+
+            @include desktop
+                width: 90%
+                display: block
+                margin-left: auto

@@ -1,0 +1,6 @@
+mixin card(title, keyword, alt)
+    .area
+        img.area-icon(src=`images/icons/${keyword}.svg`, alt=alt)
+        .container
+            h3= title
+            a(href=`#${keyword}`).mais Saiba mais

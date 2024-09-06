@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@700&display=swap')
+    
+$black: #121110
+$gold: #D5B173
+$lightgray: #444444
+$darkgray: #2c2c2c
+
+$page-margin: 10vw
+
+@mixin phone
+    @media screen and ( max-width: 899px )
+        @content
+
+@mixin desktop
+    @media screen and ( min-width: 900px )
+        @content 
+
+*
+    padding: 0
+    margin: 0
+    outline: 0
+    box-sizing: border-box
+
+body
+    font-family: 'Montserrat', sans-serif
+    color: $lightgray
+
+main
+    @include phone
+        padding: $page-margin
+    
+    @include desktop
+        padding: (0.25 * $page-margin) $page-margin
+        min-height: calc(100vh - 160px)
+
+h1
+    font-family: 'Playfair Display', serif
+    color: $darkgray
+    text-transform: uppercase
+    margin-bottom: 1rem
+
+    @include desktop
+        font-size: 2.5rem
+
+h2
+    font-family: 'Playfair Display', serif
+    color: $gold
+    margin-bottom: 1rem
+
+    @include desktop
+        font-size: 2.25rem
+
+a
+    text-decoration: none
+    color: inherit
+
+@include desktop
+    .mobile
+        display: none
+
+header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    position: fixed
+    top: 0
+
+    width: 100%
+    height: 80px
+    padding: 0 $page-margin 
+    z-index: 2
+
+    background-color: $black
+
+    & + *
+        margin-top: 80px
+
+    img.logo
+        width: 30px
+        height: 30px
+
+    nav#menu
+        @include phone
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: flex-end        
+            position: fixed
+            top: 0
+            right: -100%
+            
+            width: 100%
+            height: 100vh
+            overflow-y: scroll
+            overflow-x: visible 
+            
+            background-color: $black
+            padding: 30px $page-margin
+            transition: all 0.5s ease 0s
+
+            &:target
+                right: 0
+
+        ul
+            list-style-type: none
+            color: #fff            
+            text-transform: uppercase
+
+            @include phone
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+
+                width: 100%
+                height: 100%
+                
+                line-height: 2rem
+                letter-spacing: .2rem
+
+            li
+                @include desktop
+                    float: left
+
+                    & + li
+                        margin-left: 2rem
+
+                a
+                    @include desktop
+                        &:hover
+                            color: $gold
+                            transition: .1s
+                    
+                    &.active
+                        @include phone
+                            color: $gold
+
+                        @include desktop
+                            border-bottom: 2px solid $gold
+
+footer
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+    background-color: $black
+    color: #fff
+    font-size: .9rem
+    height: 80px
+    padding: 0 $page-margin

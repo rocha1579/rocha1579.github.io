@@ -1,0 +1,61 @@
+include includes/_common.pug
+
+doctype html
+html
+    head
+        title Escritório de Advocacia Professor Diógenes da Cunha Lima - Natal/RN
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel="icon", href="images/favicon.png")
+        link(rel='stylesheet', href='styles/historia.css')
+    body
+        +header('historia')
+        main
+            .content
+                h1 As Sete Vidas de um Escritório
+                .texto
+                    p
+                        | Com um quadro expressivo de bons profissionais, o 
+                        strong Escritório de Advocacia Professor Diogénes da Cunha Lima
+                        | funciona na Avenida Hermes da Fonseca, nº 957, no Tirol,
+                        | há mais de 20 anos. O advogado, cujo nome é também o de seu escritório,
+                        | atuou profissionalmente em sete sedes ao longo da capital potiguar.
+                    p.
+                        Tudo começou ainda nos anos 60, no Alecrim, na Avenida Presidente Quaresma,
+                        em cima do Armazém Triunfo, no Edifício São José. Foi transferido
+                        para um prédio próprio, na Ulisses Caldas. Algum tempo depois,
+                        foi a hora e a vez do escritório funcionar em um prédio vizinho
+                        ao Tribunal de Justiça, adquirido e construído exatamente para essa finalidade.
+                        A quarta etapa aconteceu na Avenida Barão do Rio Branco, em duas salas, e, 
+                        a seguir, na Rua Jundiaí, no Tirol. Por fim, enquanto se formava
+                        a sede do escritório atual, funcionou durante uns dois anos na Rua Mossoró,
+                        Petrópolis. Para matar a saudade, reproduziremos aqui algumas imagens dessas Sete Vidas.
+                    
+                    .assinatura
+                        strong Prof. Diógenes da Cunha Lima
+                        small Fundador do Escritório
+
+            .carousel
+                .carousel-picture
+                    img(src="images/sedes/sede-1.jpg", alt="Primera sede do escritório")
+                .carousel-picture
+                    img(src="images/sedes/sede-2.jpg", alt="Segunda sede do escritório")
+                .carousel-picture
+                    img(src="images/sedes/sede-3.jpg", alt="Terceira sede do escritório")
+                .carousel-picture
+                    img(src="images/sedes/sede-4.jpg", alt="Quarta sede do escritório")
+                .carousel-picture
+                    img(src="images/sedes/sede-5.jpg", alt="Quinta sede do escritório")
+                .carousel-picture
+                    img(src="images/sedes/sede-6.jpg", alt="Sexta sede do escritório")
+                .carousel-picture
+                    img(src="images/sedes/sede-7.jpg", alt="Sétima sede do escritório")
+                .carousel-label
+                    strong 60
+                    small
+                        | anos de 
+                        br
+                        |experiência
+            
+        +footer
+        script(src="scripts/carousel.js")

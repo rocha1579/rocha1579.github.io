@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #444444;
+}
+
+@media screen and (max-width: 899px) {
+  main {
+    padding: 10vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    padding: 2.5vw 10vw;
+    min-height: calc(100vh - 160px);
+  }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: #2c2c2c;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: #D5B173;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (min-width: 900px) {
+  .mobile {
+    display: none;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 10vw;
+  z-index: 2;
+  background-color: #121110;
+}
+
+header + * {
+  margin-top: 80px;
+}
+
+header img.logo {
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 899px) {
+  header nav#menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: visible;
+    background-color: #121110;
+    padding: 30px 10vw;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  header nav#menu:target {
+    right: 0;
+  }
+}
+
+header nav#menu ul {
+  list-style-type: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 899px) {
+  header nav#menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    line-height: 2rem;
+    letter-spacing: .2rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  header nav#menu ul li {
+    float: left;
+  }
+  header nav#menu ul li + li {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  header nav#menu ul li a:hover {
+    color: #D5B173;
+    -webkit-transition: .1s;
+    transition: .1s;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  header nav#menu ul li a.active {
+    color: #D5B173;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  header nav#menu ul li a.active {
+    border-bottom: 2px solid #D5B173;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #121110;
+  color: #fff;
+  font-size: .9rem;
+  height: 80px;
+  padding: 0 10vw;
+}
+
+.texto p {
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+.texto p + p {
+  margin-top: 1rem;
+}
+
+.texto .assinatura {
+  margin: 1rem 0;
+}
+
+.texto .assinatura strong {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #D5B173;
+  display: block;
+}
+
+@media screen and (min-width: 900px) {
+  .texto .assinatura strong {
+    font-size: 1.5rem;
+  }
+}
+
+.texto .assinatura small {
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main .side-picture {
+    min-width: 60%;
+    margin-top: 4.6rem;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  main .side-picture img {
+    width: 100vw;
+    margin-left: -10vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main .side-picture img {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+  }
+}
+/*# sourceMappingURL=professor.css.map */
+
+html {
+  scroll-behavior: smooth;
+}

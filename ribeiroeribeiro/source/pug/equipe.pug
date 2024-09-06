@@ -1,0 +1,96 @@
+include includes/_common.pug
+
+doctype html
+html
+    head
+        title Escritório de Advocacia Professor Diógenes da Cunha Lima - Natal/RN
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel="icon", href="images/favicon.png")
+        link(rel='stylesheet', href='styles/equipe.css')
+    body
+        +header('equipe')
+        main
+            h1 Nossa Equipe
+            .equipe
+                .membro.collapsed(onclick="expand(this)")
+                    img.perfil(src="images/equipe/diogenes.jpg")
+                    img.hint(src="images/icons/hand.svg", alt="Símbolo de mão")
+                    .info
+                        h2 Diógenes da Cunha Lima
+                        p.
+                            Advogado, poeta, ensaísta e presidente da Academia Norte-rio-grandense de Letras.
+                            Sua atuação na advocacia teve início em 1963, tornando-se, posteriormente,
+                            um dos mais reconhecidos advogados do Estado, pela defesa exercida em causas notórias
+                            da região. Dedica-se, principalmente, a causas que envolvem o Direito Empresarial,
+                            matéria que lecionou durante 30 anos na Universidade Federal do Rio Grande do Norte,
+                            local em que exerceu, também, o cargo de Reitor.
+                        p.
+                            Entendendo que todo saber serve à aplicação da Justiça, o Professor Diógenes é um advogado
+                            que estuda e aprende algo novo todos os dias,
+                            fornecendo, assim, uma advocacia artesanal de excelência há mais de 50 anos.
+                .membro.collapsed(onclick="expand(this)")
+                    img.perfil(src="images/equipe/olindina.jpg")
+                    img.hint(src="images/icons/hand.svg", alt="Símbolo de mão")
+                    .info
+                        h2 Olindina Maria da Cunha Lima Freire
+                        p.
+                            Graduada em Direito pela UFRN, iniciou no Escritório como estagiária, em 1966.
+                            Passou a integrar a sociedade após exercer as funções de chefia do setor jurídico
+                            e Gerente Geral no Banorte Crédito Imobiliário, sendo a primeira mulher a ocupar o cargo
+                            e adquirindo vasta experiência na área de contratos e no jurídico.
+                            Desde então, exerce no Escritório, principalmente, as funções administrativas,
+                            sendo o pilar da estruturação e desenvolvimento saudável do Escritório Diógenes da Cunha Lima. 
+                .membro.collapsed(onclick="expand(this)")
+                    img.perfil(src="images/equipe/natalia.jpg")
+                    img.hint(src="images/icons/hand.svg", alt="Símbolo de mão")
+                    .info
+                        h2 Natália Galvão da Cunha Lima Freire
+                        p.
+                            Graduada em Direito pela UFRN, com extensão em Direito Penal Econômico pela
+                            Escola Paulista da Magistratura, pós-graduanda em Direito Penal e Processo Penal
+                            pela Academia Brasileira de Direito Constitucional, pesquisadora em Ciências Criminais
+                            na UFRN e coautora do livro "Direito e Linguagem nas Decisões Criminais".
+                        p
+                            strong Áreas de Atuação: 
+                            | Direito Penal Clássico e Direito Penal Econômico.
+                .membro.collapsed(onclick="expand(this)")
+                    img.perfil(src="images/equipe/rodrigo.jpg")
+                    img.hint(src="images/icons/hand.svg", alt="Símbolo de mão")
+                    .info
+                        h2 Rodrigo da Cunha Lima Freire
+                        p.
+                            Graduado em Direito pela UFRN, Mestre e Doutor em Direito Processual Civil pela PUC/SP,
+                            Professor de Processo Civil da Universidade Presbiteriana Mackenzie,
+                            do Complexo de Ensino Renato Saraiva e da FMU, coordenador da Especialização
+                            e Professor da Escola Superior de Advocacia (ESA/SP), membro do IBDP e da ABDPro,
+                            conferencista e autor de diversos livros na área de Processo Civil.
+                        p
+                            strong Áreas de Atuação: 
+                            | Direito e Processo Civil.
+                .membro.collapsed(onclick="expand(this)")
+                    img.perfil(src="images/equipe/glicia.jpg")
+                    img.hint(src="images/icons/hand.svg", alt="Símbolo de mão")
+                    .info
+                        h2 Glícia Medeiros Takahashi
+                        p.
+                            Graduada em Direito pena UNP - Universidade Potiguar e pós-graduanda em Direito Previdenciário pela EBRADI
+                            - Escola Brasileira de Direito. Integra o escritório desde o ano de 2011.
+                        p
+                            strong Áreas de Atuação: 
+                            | Direito do Consumidor e Direito Previdenciário.
+                .membro.collapsed(onclick="expand(this)")
+                    img.perfil(src="images/equipe/alana.jpg")
+                    img.hint(src="images/icons/hand.svg", alt="Símbolo de mão")
+                    .info
+                        h2 Alana Klayne Torquato Câmara de Oliveira
+                        p.
+                            Graduada em Direito pela UNP – Universidade Potiguar, pós-graduanda em
+                            Direito Penal Econômico pela PUC-MG. Integra o Escritório desde o ano de 2012.
+                        p
+                            strong Áreas de Atuação: 
+                            | Direito Empresarial, Direito Civil e Direito de Família e Sucessões.
+        
+        +footer
+
+        script(src="scripts/team.js")

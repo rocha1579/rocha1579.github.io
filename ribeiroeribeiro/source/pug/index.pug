@@ -1,0 +1,92 @@
+include includes/_common.pug
+include includes/_card.pug
+
+doctype html
+html
+    head
+        title Escritório de Advocacia Professor Diógenes da Cunha Lima - Natal/RN
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel="icon", href="images/favicon.png")
+        link(rel='stylesheet', href='styles/index.css')
+    body
+        +header('index')
+
+        section#inicio
+            .carousel-picture
+                img(src="images/ribeiro-walpaper.jpg", alt="Fachada do escritório") // Ajuste no nome do arquivo
+            .carousel-picture
+                img(src="images/sala-de-atendimento.jpg", alt="Sala de atendimento do escritório")
+            .carousel-picture
+                img(src="images/gabinete.jpg", alt="Gabinete do escritório")
+
+        section#pilares
+            .pilar
+                img(src="images/icons/hammer.svg", alt="Martelo de tribunal")
+                h3 Missão
+                p
+                    | Assegurar com equilíbrio, a realização do Direito, garantindo, através de profissionais éticos e competentes, a segurança da assistência continuada, contribuindo, como advocacia de excelência, para que a justiça aconteça e prevaleça na sociedade.
+            .pilar
+                img(src="images/icons/scale.svg", alt="Balança de dois pratos")
+                h3 Visão
+                p
+                    | Ver o escritório como uma Instituição amada e respeitada no Estado. Nossos advogados são selecionados entre os melhores e procuram dar assistência jurídica a nível de excelência. A cada dia um pouco mais.
+            .pilar
+                img(src="images/icons/court.svg", alt="Fachada do Partenon")
+                h3 Valores
+                p
+                    | São valores do Escritório o sentido e alcance das leis, doutrinas e jurisprudência; tratar o cliente com respeito e amizade, os Juízes e ao Ministério Público como parceiros no sentido de busca da Justiça; Fazer do “Pro Bono” um trabalho agradável e útil.
+
+        section#areas
+            h2 Áreas de Atuação
+            hr
+            .areas-container
+                +card("Civil", "civil", "Balança de dois pratos")
+                +card("Criminal", "criminal", "Martelo de tribunal")
+                +card("Empresarial", "empresarial", "Contrato com selo")
+                +card("Consumidor", "consumidor", "Moeda flutuando sobre uma mão")
+
+        section#professor
+            img(src="images/diogenes-stars.jpg", alt="Professor Diógenes")
+            .content
+                h2 Professor Diógenes da Cunha Lima
+                p
+                    | Um advogado que estuda e que aprende algo todos os dias.
+                    br
+                    | Entendendo que todo saber serve à aplicação da Justiça.
+                a(href="professor.html") Leia Mais
+
+        section#contato
+            h2 Fale Conosco
+            span.status
+            .content
+                form
+                    input(type="text", name="Nome", placeholder="Nome")
+                    input(type="text", name="Email", placeholder="E-mail")
+                    textarea(placeholder="Mensagem", name="Mensagem", cols="30", rows="10")
+                    input(type="submit", value="Enviar")
+                .infos
+                    .card
+                        h3 Endereço
+                        span Av. Hermes da Fonseca, 957, Tirol, Natal - RN, 59014-555
+                    .card
+                        h3 Contatos
+                        span Telefone: (84) 3216-2300
+                        span E-mail: diogenes@dcl.adv.br
+                    .card
+                        h3 Horário de Atendimento
+                        span Segunda a Sexta
+                        span 08:00 às 18:00 horas
+                    .card
+                        h3 Nos siga nas redes sociais
+                        a(href="https://www.facebook.com/advocaciadiogenesdacunhalima/", target="_blank", rel="noopener noreferrer")
+                            img(src="images/icons/facebook.svg", alt="Ícone do Facebook")
+                        a(href="https://instagram.com/advocaciadiogenesdacunhalima", target="_blank", rel="noopener noreferrer")
+                            img(src="images/icons/instagram.svg", alt="Ícone do Instagram")
+
+        // Mapa integrado por iframe (verifique se o link está correto)
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.7888131693923!2d-48.2878916!3d-18.8896289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef27b25246d5f%3A0xa9b1e0c8f8a2e1a3!2sAvenida%20Cleanto%20Vieira%20Gon%C3%A7alves%2C%20245%2C%20Escrit%C3%B3rio%2C%20Presidente%20Roosevelt%2C%20Uberl%C3%A2ndia%20-%20MG%2C%2038401-195!5e0!3m2!1spt-BR!2sbr!4v1621569876583!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy")
+
+        +footer
+        script(src="scripts/carousel.js")
+        script(src="scripts/form.js")

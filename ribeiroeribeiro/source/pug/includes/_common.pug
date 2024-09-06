@@ -1,0 +1,22 @@
+mixin header(active)
+    header#page
+        a(href="./index.html")
+            img.logo(src='images/logo.png', alt='Logotipo do escritório')
+        a.mobile(href='#menu')
+            img(src='images/icons/menu.svg', alt='Abrir menu')
+        nav#menu
+            a.mobile(href='#page')
+                img(src='images/icons/x-mark.svg', alt='Fechar menu')
+            ul
+                li
+                    a(class=(active === "index" ? "active" : undefined) href='./index.html') Início 
+                li
+                    a(class=(active === "historia" ? "active" : undefined) href='./historia.html') História  
+                li
+                    a(class=(active === "professor" ? "active" : undefined) href='./professor.html') O Professor            
+                li
+                    a(class=(active === "equipe" ? "active" : undefined) href='./equipe.html') Equipe
+
+mixin footer
+    footer
+        span Escritório de Advocacia Professor Diógenes da Cunha Lima &horbar; 2020
